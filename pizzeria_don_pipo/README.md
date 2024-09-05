@@ -1,21 +1,26 @@
 
-# Pizzería Don Pipo
+# 🍕 **Pizzería Don Pipo** 🍕
+**Proyecto de Simulación de Pizzería usando Programación Orientada a Objetos (POO) en Python**
 
-Este proyecto simula la operación de la pizzería de Don Pipo, aplicando conceptos de Programación Orientada a Objetos (POO) en Python.
+---
 
-## Descripción
+## 📝 **Descripción del Proyecto**
 
-La pizzería cuenta con tres empleados:
-- Un maestro pizzero, encargado de preparar las pizzas.
-- Dos mozos, que se encargan de entregar los pedidos.
+**Pizzería Don Pipo** es una simulación que representa el funcionamiento de una pizzería ficticia, aplicando conceptos de Programación Orientada a Objetos (POO) en Python. El proyecto cuenta con una estructura modular y organizada para facilitar la comprensión y mantenimiento del código.
 
-### Reglas de Negocio
-1. El maestro pizzero puede recibir un pedido a la vez, pero puede preparar múltiples pizzas al mismo tiempo.
-2. Los mozos solo pueden cargar hasta dos pizzas al mismo tiempo.
+### 👨‍🍳 **Empleados**
+- **Maestro Pizzero**: Responsable de preparar las pizzas. 
+- **Mozos**: Dos mozos encargados de entregar los pedidos a los clientes.
 
-## Estructura del Proyecto
+### 📋 **Reglas de Negocio**
+1. El **Maestro Pizzero** puede recibir un pedido a la vez, pero puede preparar múltiples pizzas simultáneamente.
+2. Los **Mozos** pueden cargar hasta dos pizzas al mismo tiempo.
 
-```
+---
+
+## 📂 **Estructura del Proyecto**
+
+```plaintext
 pizzeria_don_pipo/
 │
 ├── src/
@@ -41,29 +46,34 @@ pizzeria_don_pipo/
 └── README.md
 ```
 
-## Ejecución
+---
 
-Para ejecutar el proyecto, sigue estos pasos:
+## 🚀 **Ejecución del Proyecto**
 
-1. Clona el repositorio o descarga el archivo comprimido con el código fuente.
-2. Instala Python 3.x en tu máquina.
-3. Ejecuta el archivo `main.py` en la carpeta `src` para ver la simulación del flujo de la pizzería:
+Sigue estos pasos para ejecutar la simulación de la pizzería:
 
-```bash
-python src/main.py
-```
+1. **Clona el repositorio** o **descarga el archivo comprimido** con el código fuente.
+2. Asegúrate de tener **Python 3.x** instalado en tu máquina.
+3. Ejecuta el archivo `main.py` en la carpeta `src` para iniciar la simulación:
 
-## Pruebas
+   ```bash
+   python src/main.py
+   ```
 
-Para ejecutar las pruebas, utiliza el framework `unittest` o `pytest`. Desde la carpeta raíz del proyecto, ejecuta el siguiente comando:
+---
+
+## ✅ **Pruebas**
+
+Para asegurarte de que todo funciona correctamente, puedes ejecutar las pruebas incluidas. Usa `pytest` o `unittest` desde la carpeta raíz del proyecto:
 
 ```bash
 pytest
 ```
 
-Esto ejecutará las pruebas contenidas en la carpeta `tests/`.
+Esto ejecutará todas las pruebas dentro de la carpeta `tests/`.
 
-## Integrantes
+---
 
-Cada miembro del grupo debe estar listado en el archivo `integrantes.txt`, ubicado en la raíz del proyecto.
+## 👥 **Integrantes**
 
+El proyecto fue desarrollado por un equipo de colaboradores. Los nombres de los integrantes están listados en el archivo `integrantes.txt` en la raíz del proyecto.
