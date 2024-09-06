@@ -1,19 +1,48 @@
-from .empleado import Empleado
+from src.empleados.maestro_pizzero import Pizza
 
+class Mozo:
+    def __init__(self, nom):
+        # Atributo de instancia: nombre del mozo y lista de pizzas (inicialmente vacía)
+        self.nombre = nom
+        self.pizzas = []
 
-class Mozo(Empleado):
-    def __init__(self, nombre):
-        super().__init__(nombre, "Mozo")
-        self.capacidad = 2  # Capacidad de cargar hasta 2 pizzas
-    
-    def cargar_pizzas(self, cantidad_pizzas):
-        if cantidad_pizzas > self.capacidad:
-            print(f"{self.nombre} no puede cargar más de {self.capacidad} pizzas.")
-        else:
-            print(f"{self.nombre} ha cargado {cantidad_pizzas} pizzas.")
-    
-    def entregar_pizzas(self, cantidad_pizzas):
-        print(f"{self.nombre} ha entregado {cantidad_pizzas} pizzas.")
-    
-    def trabajar(self):
-        print(f"{self.nombre} está listo para entregar pedidos.")
+    # Comando para establecer el nombre del mozo
+    def establecerNombre(self, nom):
+        self.nombre = nom
+
+    # Comando para que el mozo tome pizzas (máximo 2)
+    def tomarPizzas(self, pizzas):
+        if len(pizzas) + len(self.pizzas) > 2:
+            raise ValueError("El mozo no puede llevar más de 2 pizzas.")
+        self.pizzas.extend(pizzas[:2 - len(self.pizzas)])
+
+    # Comando para servir las pizzas (limpia la lista de pizzas)
+    def servirPizzas(self):
+        self.pizzas.clear()
+
+    # Consulta para obtener el nombre del mozo
+    def obtenerNombre(self):
+        return self.nombre
+
+    # Consulta para obtener las pizzas que el mozo está llevando
+    def obtenerPizzas(self):
+        return self.pizzas
+
+    # Consulta para saber si el mozo está libre
+    def obtenerEstadoLibre(self):
+        return len(self.pizzas) < 2
+
+# Ejemplo de uso
+mozo = Mozo("Carlos")
+print(mozo.obtenerEstadoLibre())  # Debería imprimir True (libre)
+
+pizza1 = Pizza("Margarita")
+pizza2 = Pizza("Pepperoni")
+mozo.tomarPizzas([pizza1, pizza2])
+
+print(mozo.obtenerPizzas())  # Debería imprimir las dos pizzas
+print(mozo.obtenerEstadoLibre())  # Debería imprimir False (ocupado)
+
+mozo.servirPizzas()
+print(mozo.obtenerPizzas())  # Debería imprimir una lista vacía
+print(mozo.obtenerEstadoLibre())  # Debería imprimir True (libre)

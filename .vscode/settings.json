@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./pizzeria_don_pipo"
+    ]
+}
