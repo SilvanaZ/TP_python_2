@@ -23,7 +23,7 @@ class MaestroPizzero:
             self.pizzasPorCocinar.append(nueva_pizza)
             return nueva_pizza
         else:
-            raise ValueError("El tipo de pizza no puede estar vacÌo")
+            raise ValueError("El tipo de pizza no puede estar vac√≠o")
 
     # Comando para cocinar pizzas (mueve de 'pizzasPorCocinar' a 'pizzasPorEntregar')
     def cocinar(self):
@@ -55,5 +55,5 @@ pizzero = MaestroPizzero("Mario")
 pizzero.tomarPedido("Margarita")
 pizzero.tomarPedido("Pepperoni")
 pizzero.cocinar()
-print(pizzero.entregar())  # DeberÌa entregar 2 pizzas
-print(pizzero.obtenerPizzasPorEntregar())  # DeberÌa estar vacÌa si no hay m·s pizzas
+print(pizzero.entregar())  # Deber√≠a entregar 2 pizzas
+print(pizzero.obtenerPizzasPorEntregar())  # Deber√≠a estar vac√≠a si no hay m√°s pizzas
